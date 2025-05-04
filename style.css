@@ -1,0 +1,42 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+#counter{
+    font-size: 6em;
+}
+#buttonContainer{
+    display: flex;
+    flex-direction: column;
+    display:block;
+    text-align: center;
+}
+.buttons{
+    padding: 5px 20px;
+    background-color: hsla(209, 100%, 53%, 0.637);
+    color: rgba(255, 255, 255, 0.897);
+    border-radius: 10px;
+    border-color: black;
+    font-size: 2em;
+    cursor:pointer;
+    transition: background-color 0.25s;
+}
+.buttons:hover{
+    background-color: hsla(209, 96%, 22%, 0.986);    
+}
+
+#startInput {
+    margin: 10px auto;
+    width: 37%;
+    height: 40px;
+    font-size: 2em;
+    text-align: center;
+}
+
+#start{
+    margin: 10px auto;
+    text-align: center;
+    font-size: 1.75em;
+}
+
