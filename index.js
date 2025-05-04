@@ -4,52 +4,60 @@ const increaseButton = document.getElementById("increase");
 const countLabel = document.getElementById("counter");
 const startButton = document.getElementById("start")
 const startCount = document.getElementById("startInput");
+const confirm = document.getElementById("confirm");
+const confirmStart = document.getElementById("confirmStart");
 
 let count = 0;
-
-window.onload = () => {
-    startCount.value = "";
-};
 
 const updateCount = () => {
     countLabel.textContent = count;
 };
 
-increaseButton.onclick = () => {
+function enterCount() {
+    const checkInput = parseInt(startInput.value);
+
+    if(!isNaN(checkInput)) {
+        count = checkInput;
+        updateCount();
+        startInput.style.display = "none";
+        confirm.style.display = "none";
+        startButton.style.display = "block";
+        startInput.value = "";
+    } else {
+        alert("That is not an Integer.")
+    }
+}
+
+increaseButton.addEventListener("click", () => {
     count++;
     updateCount();
-};
+});
 
-decreaseButton.onclick = () => {
+decreaseButton.addEventListener("click", () => {
     count--;
     updateCount();
-};
+});
 
-resetButton.onclick = () => {
+resetButton.addEventListener("click", () => {
     count = 0;
-    startInput.style.display = "none";
+    confirmStart.style.display = "none";
     startButton.style.display = "block";
-    startCount.value = "";
+    startInput.value = "";
     updateCount();
-};
+});
 
-startButton.onclick = () => {
-    startInput.style.display = "block";
+startButton.addEventListener("click", () => {
+    confirmStart.style.display = "block";
     startButton.style.display = "none";
-}
+    startInput.focus();
+});
+
+confirm.addEventListener("click", () => {
+    enterCount();
+});
 
 startCount.addEventListener("keydown", (event) => {
     if(event.key === "Enter") {
-        const checkInput = parseInt(startInput.value);
-
-        if(!isNaN(checkInput)) {
-            count = checkInput;
-            updateCount();
-            startInput.style.display = "none";
-            startButton.style.display = "block";
-            startInput.value = "";
-        } else {
-            alert("That is not an Integer.")
-        }
+        enterCount();
     }
 });

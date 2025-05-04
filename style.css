@@ -1,16 +1,17 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-}
-
-#counter{
-    font-size: 6em;
+    background-color: hsla(34, 93%, 79%, 0.677);
 }
 #buttonContainer{
     display: flex;
     flex-direction: column;
-    display:block;
     text-align: center;
+    align-items: center;
+    border: 10px black;
+}
+#counter{
+    font-size: 6em;
 }
 .buttons{
     padding: 5px 20px;
@@ -25,18 +26,31 @@ body{
 .buttons:hover{
     background-color: hsla(209, 96%, 22%, 0.986);    
 }
-
-#startInput {
-    margin: 10px auto;
-    width: 37%;
-    height: 40px;
-    font-size: 2em;
-    text-align: center;
-}
-
 #start{
     margin: 10px auto;
     text-align: center;
     font-size: 1.75em;
+    width: 260px;
 }
-
+#confirmStart{
+    display: none;
+    margin: 10px auto;
+    width: 260px;
+    height: 50px;
+    box-sizing: border-box;
+}
+#startInput {
+    font-size: 1.5em;
+    text-align: center;
+    width: 175px;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+#confirm{
+    font-size: 1.5em;
+    width: auto;
+    height: 100%;
+    box-sizing: border-box;
+}

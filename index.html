@@ -8,8 +8,8 @@
     <link rel="icon" href="/images/beach-ball-16--13b11c85-4ed6-4a8e-bfd6-02d1c31b40af-jpgrendition.jpg">
 </head>
 <body>
-    <h1 id="myH1">Counter</h1>
     <div id="buttonContainer">
+        <h1 id="myH1">Counter</h1>
         <span id="counter">0</span><br>
 
         <div id="controlButtons">
@@ -18,8 +18,12 @@
             <button class="buttons" id="increase" title="Increase"> + </button>
         </div>
 
-        <button class="buttons" id="start" title="Starting Number" onclick="startButton()"> Starting Number </button>
-        <input id="startInput" type="number" style="display:none" placeholder="Start Number">
+        <button class="buttons" id="start" title="Starting Number">Starting Number</button>
+        <div id="confirmStart">
+            <input id="startInput" type="number" placeholder="Start Number">
+            <button class="buttons" id="confirm" title="Confirm">OK</button>
+        </div>
+
     </div>
 
     </div>
