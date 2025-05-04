@@ -19,8 +19,7 @@ function enterCount() {
     if(!isNaN(checkInput)) {
         count = checkInput;
         updateCount();
-        startInput.style.display = "none";
-        confirm.style.display = "none";
+        confirmStart.style.display = "none";
         startButton.style.display = "block";
         startInput.value = "";
     } else {
