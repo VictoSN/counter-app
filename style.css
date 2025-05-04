@@ -19,16 +19,38 @@ body{
     border: 10px black;
     box-shadow: 0 4px 8px rgb(64, 64, 64);
 }
-#myH1{
-    margin: 0;
+#topBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
-#add{
-    margin-left: auto;
+#myHeader{
+    width: 200px;
+    font-size: 2em;
+    text-align: center;
+    border: none;
+    box-sizing: border-box;
+}
+#myHeader::placeholder {
+    color: black;
+}
+.topButtons{
+    font-size: 1em;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s;
+    background-color: hsla(0, 0%, 50%, 0.511);
+}
+.topButtons:hover{
+    background-color: hsl(0, 0%, 50%);
 }
 #counter{
     font-size: 6em;
 }
-
 .buttons{
     padding: 5px 20px;
     background-color: hsla(209, 100%, 53%, 0.8);

@@ -1,3 +1,5 @@
+const addCounter = document.getElementById("add");
+const removeCounter = document.getElementById("remove");
 const decreaseButton = document.getElementById("decrease");
 const resetButton = document.getElementById("reset");
 const increaseButton = document.getElementById("increase");
@@ -8,6 +10,7 @@ const confirm = document.getElementById("confirm");
 const confirmStart = document.getElementById("confirmStart");
 
 let count = 0;
+let counterNumber = 1;
 
 const updateCount = () => {
     countLabel.textContent = count;
@@ -23,7 +26,7 @@ function enterCount() {
         startButton.style.display = "block";
         startInput.value = "";
     } else {
-        alert("That is not an Integer.")
+        alert("Insert an Integer.")
     }
 }
 
@@ -59,4 +62,12 @@ startCount.addEventListener("keydown", (event) => {
     if(event.key === "Enter") {
         enterCount();
     }
+});
+
+addCounter.addEventListener("click", () => {
+
+});
+
+removeCounter.addEventListener("click", () => {
+
 });
