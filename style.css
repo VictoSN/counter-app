@@ -1,14 +1,24 @@
-body{
+body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     justify-content: center;
     align-items: center; 
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 20px;
     background-color: hsla(0, 0%, 49%, 0.677);
 }
-#buttonContainer{
+
+#countersContainer {
+    display: flex;
+    max-width: 350px;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.counter-wrapper {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -16,69 +26,92 @@ body{
     text-align: center;
     align-items: center;
     border-radius: 15px;
-    border: 10px black;
+    border: 1px solid black;
     box-shadow: 0 4px 8px rgb(64, 64, 64);
 }
-#topBar{
+
+.topBar {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-bottom: 10px;
 }
-#myHeader{
+
+.myHeader {
     width: 200px;
     font-size: 2em;
     text-align: center;
     border: none;
     box-sizing: border-box;
+    margin: 0 10px;
 }
-#myHeader::placeholder {
+
+.myHeader::placeholder {
     color: black;
 }
-.topButtons{
-    font-size: 1em;
-    width: 30px;
-    height: 30px;
+
+.topButtons {
+    font-size: 1.5em;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
     transition: background-color 0.25s;
-    background-color: hsla(0, 0%, 50%, 0.511);
+    background-color: hsla(209, 100%, 53%, 0.8);
+    color: rgba(255, 255, 255, 0.897);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.topButtons:hover{
-    background-color: hsl(0, 0%, 50%);
+
+.topButtons:hover {
+    background-color: hsla(209, 96%, 22%, 0.986);
 }
-#counter{
+
+.counter {
     font-size: 6em;
+    margin: 10px 0;
 }
-.buttons{
+
+.controlButtons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.buttons {
     padding: 5px 20px;
     background-color: hsla(209, 100%, 53%, 0.8);
     color: rgba(255, 255, 255, 0.897);
     border: none;
     border-radius: 10px;
     font-size: 2em;
-    cursor:pointer;
+    cursor: pointer;
     transition: background-color 0.25s;
-    margin: 0.25rem;
 }
-.buttons:hover{
+
+.buttons:hover {
     background-color: hsla(209, 96%, 22%, 0.986);    
 }
-#start{
+
+.start {
     margin: 15px auto;
     text-align: center;
     font-size: 1.75em;
     width: 260px;
 }
-#confirmStart{
+
+.confirmStart {
     display: none;
     margin: 10px auto;
     width: 260px;
     height: 45px;
     box-sizing: border-box;
 }
-#startInput {
+
+.startInput {
     font-size: 1em;
     text-align: center;
     width: 65%;
@@ -87,7 +120,8 @@ body{
     border: 1px solid black;
     box-sizing: border-box;
 }
-#confirm{
+
+.confirm {
     font-size: 1.5em;
     width: auto;
     height: 100%;
