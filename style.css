@@ -1,13 +1,12 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
     text-align: center;
     justify-content: center;
     align-items: center; 
-    display: flex;
     min-height: 100vh;
     margin: 0;
-    padding: 20px;
-    background-color: hsla(0, 0%, 49%, 0.677);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 #countersContainer {
@@ -26,14 +25,22 @@ body {
     text-align: center;
     align-items: center;
     border-radius: 15px;
-    border: 1px solid black;
+    border: none;
     box-shadow: 0 4px 8px rgb(64, 64, 64);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.counter-wrapper:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 16px rgba(0, 0, 0, 0.12),
+        0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 .topBar {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     margin-bottom: 10px;
 }
@@ -43,8 +50,16 @@ body {
     font-size: 2em;
     text-align: center;
     border: none;
+    background: transparent;
     box-sizing: border-box;
     margin: 0 10px;
+    border-bottom: 2px solid #e2e8f0;
+    transition: border-color 0.3s ease;
+}
+
+.myHeader:focus {
+    outline: none;
+    border-color: #4299e1;
 }
 
 .myHeader::placeholder {
@@ -60,14 +75,16 @@ body {
     cursor: pointer;
     transition: background-color 0.25s;
     background-color: hsla(209, 100%, 53%, 0.8);
-    color: rgba(255, 255, 255, 0.897);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .topButtons:hover {
-    background-color: hsla(209, 96%, 22%, 0.986);
+    background-color: hsla(209, 100%, 53%, 0.986);
+    transform: scale(1.05);
 }
 
 .counter {
