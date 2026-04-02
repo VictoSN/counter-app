@@ -8,8 +8,21 @@ This project showcase a simple counter program to be a part of my personal learn
 2. Naming individual counter.
 3. Starting number count.
 
-## Possible Future Upgrades
+## How it works
+- Creates components using DOM manipulation
+- Assign each counter instances an event listeners and state logic
+- Ensure there is atleast one counter active
 
-1. Each rows can contains multiple counter instances in desktop.
-2. Better Color Scheme.
-3. +5 / +10 incremenets.
+## Screenshots
+### Default Interface
+![Default Interface](images/Default.png)
+
+### Example Interface
+![Example Interface](images/Example.png)
+
+### Multi-Counter Instace
+![Multi-Counter Instance](images/Multi-Counter.png)
+
+## How to run
+1. Download the project
+2. Open index.html
