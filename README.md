@@ -26,3 +26,6 @@ This project showcase a simple counter program to be a part of my personal learn
 ## How to run
 1. Download the project
 2. Open index.html
+
+## License
+This project is licensed under the [MIT License](LICENSE)
